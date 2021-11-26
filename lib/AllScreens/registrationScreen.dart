@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:rider_app/AllScreens/loginScreen.dart';
 
 class RegistrationScreen extends StatelessWidget {
 
 
+  //variabe for Screen Routing
+  static const String idScreen = "register";
+
   @override
   Widget build(BuildContext context) {
+
+    //variabel for Screen Routing
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -98,7 +106,7 @@ class RegistrationScreen extends StatelessWidget {
 
                     SizedBox(height: 40.0,),
                     RaisedButton(onPressed: (){
-                      print("Something to tesr");
+                      print("Something to test");
                     },
                       color: Colors.yellow,
                       textColor: Colors.white,
@@ -106,7 +114,7 @@ class RegistrationScreen extends StatelessWidget {
                         height: 50.0,
                         child: Center(
                           child: Text(
-                            "Login",
+                            "Register",
                             style: TextStyle(fontSize: 18.0, fontFamily: "Brand Bold"),
                           ),
                         ),
@@ -119,9 +127,11 @@ class RegistrationScreen extends StatelessWidget {
                 ),
               ),
 
-              FlatButton(onPressed: (){},
+              FlatButton(onPressed: (){
+                Navigator.pushAndRemoveUntil(context, LoginScreen.idScreen, (route) => false);
+              },
                   child: Text(
-                    "Create New Account!",
+                    "Have an Account!",
                   ))
 
             ],

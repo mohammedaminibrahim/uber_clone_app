@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:rider_app/AllScreens/registrationScreen.dart';
 
 class LoginScreen extends StatelessWidget {
 
 
+  //variabe for Screen Routing
+  static const String idScreen = "login";
+
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -85,7 +91,9 @@ class LoginScreen extends StatelessWidget {
               ),
               ),
 
-              FlatButton(onPressed: (){},
+              FlatButton(onPressed: (){
+                Navigator.pushAndRemoveUntil(context, RegistrationScreen.idScreen, (route) => false);
+              },
                   child: Text(
                     "Create New Account!",
                   ))
