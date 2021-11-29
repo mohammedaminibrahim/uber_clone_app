@@ -91,8 +91,8 @@ class LoginScreen extends StatelessWidget {
               ),
               ),
 
-              FlatButton(onPressed: (){
-                Navigator.pushAndRemoveUntil(context, RegistrationScreen.idScreen, (route) => false);
+              TextButton(onPressed: (){
+                Navigator.pushNamedAndRemoveUntil(context, RegistrationScreen.idScreen, (route) => false);
               },
                   child: Text(
                     "Create New Account!",
