@@ -32,17 +32,17 @@ class RegistrationScreen extends StatelessWidget {
           padding: EdgeInsets.all(8.0),
           child: Column(
             children: [
-              SizedBox(height: 65.0,),
+              SizedBox(height: 55.0,),
               Image(image: AssetImage("images/logo.png"),
                 width: 35.0,
-                height: 350.0,
+                height: 150.0,
                 alignment: Alignment.center,
               ),
 
               SizedBox(height: 15.0,),
 
               Text(
-                "Register as a RIder",
+                "Register",
                 style: TextStyle(fontSize: 24.0, fontFamily: "Brand Bold"),
                 textAlign: TextAlign.center,
               ),
@@ -101,9 +101,7 @@ class RegistrationScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 14.0),
                     ),
 
-
-
-                    SizedBox(height: 40.0,),
+                    SizedBox(height: 1.0,),
                     TextField(
                       controller: passwordTextEditingController ,
                       obscureText: true,
@@ -141,7 +139,7 @@ class RegistrationScreen extends StatelessWidget {
 
 
                     },
-                      color: Colors.yellow,
+                      color: Colors.green,
                       textColor: Colors.white,
                       child: Container(
                         height: 50.0,
@@ -164,7 +162,7 @@ class RegistrationScreen extends StatelessWidget {
                 Navigator.pushNamedAndRemoveUntil(context, LoginScreen.idScreen, (route) => false);
               },
                   child: Text(
-                    "Have an Account!",
+                    "Have an Account!", style: TextStyle(color: Colors.green)
                   ))
 
             ],
