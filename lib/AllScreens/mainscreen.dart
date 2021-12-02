@@ -66,6 +66,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ],
               ),
+
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 18.0),
                 child: Column(
@@ -74,7 +75,7 @@ class _MainScreenState extends State<MainScreen> {
                     SizedBox(height: 6.0,),
                     Text("Hi there", style: TextStyle(fontSize: 12.0, ),),
                     Text("Home", style: TextStyle(fontSize: 12.0, fontFamily: "Brand-Bold"),),
-                    SizedBox(height: 20.0,),
+                     SizedBox(height: 20.0,),
                     Container(
                       height: 320,
                         decoration: BoxDecoration(
@@ -92,26 +93,62 @@ class _MainScreenState extends State<MainScreen> {
                       child: Row(
                         children: [
                           Icon(Icons.search, color: Colors.yellowAccent,),
-                          SizedBox(height: 24.0,),
+                          SizedBox(height: 10.0,),
+                          Text("Search Drop off")
+                          ],
+                      ),
+                    ),
 
-                          Row(
-                            children: [
+                    SizedBox(height: 24.0,),
+
+                    Row(
+                      children: [
                               Icon(Icons.home, color: Colors.grey,),
                               SizedBox(height: 4.0,),
-                              Text("Home Address", style: TextStyle(color:  Colors.grey),),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("Add Home"),
+                                  SizedBox(height: 4.0,),
+                                  Text("Your living Home address", style: TextStyle(fontFamily: "Brand-Bold"),),
+                                ],
+                              )
+
                             ],
-                          )
+                          ),
+
+
+                    SizedBox(height: 10.0,),
+
+                    Divider(),
+
+                    SizedBox(height: 16.0,),
+
+                    Row(
+                      children: [
+                        Icon(Icons.work, color: Colors.grey,),
+                        SizedBox(width: 12.0,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text("Add Work"),
+                            SizedBox(height: 4.0,),
+                            Text("Your Working address", style: TextStyle(fontFamily: "Brand-Bold"),),
+                          ],
+                        )
+
+                      ],
+                    )
                         ],
                       ),
                     )
 
-                  ],
+
                 ),
               ),
-            ),
-          )
-        ],
+            ],
       ),
-    );
+          );
+
   }
 }
