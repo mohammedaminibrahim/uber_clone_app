@@ -30,9 +30,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Uber Clone App"),
-      ),
+
       body: Stack(
         children: [
           GoogleMap(
@@ -75,9 +73,9 @@ class _MainScreenState extends State<MainScreen> {
                     SizedBox(height: 6.0,),
                     Text("Hi there", style: TextStyle(fontSize: 12.0, ),),
                     Text("Home", style: TextStyle(fontSize: 12.0, fontFamily: "Brand-Bold"),),
-                     SizedBox(height: 20.0,),
+                     SizedBox(height: 10.0,),
                     Container(
-                      height: 320,
+                      //height: 320,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(5.0),
@@ -90,12 +88,15 @@ class _MainScreenState extends State<MainScreen> {
                             ),
                           ],
                         ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.search, color: Colors.yellowAccent,),
-                          SizedBox(height: 10.0,),
-                          Text("Search Drop off")
-                          ],
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Row(
+                          children: [
+                            Icon(Icons.search, color: Colors.green,),
+                            SizedBox(height: 10.0,),
+                            Text("Search Drop off")
+                            ],
+                        ),
                       ),
                     ),
 
@@ -118,16 +119,16 @@ class _MainScreenState extends State<MainScreen> {
                           ),
 
 
-                    SizedBox(height: 10.0,),
+                    SizedBox(height: 5.0,),
 
                     Divider(),
 
-                    SizedBox(height: 16.0,),
+                    SizedBox(height: 5.0,),
 
                     Row(
                       children: [
                         Icon(Icons.work, color: Colors.grey,),
-                        SizedBox(width: 12.0,),
+                        SizedBox(width: 10.0,),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
